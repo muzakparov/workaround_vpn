@@ -7,7 +7,9 @@ var url = 'http://docker.iosport-test.int.dev.superbet.com:8627'
 var name='selelction'
 
 router.get("/api/get_selections", function (req, res, next) {
-  request(url, function (error, response, body) {
+  var url_get = url + req.path
+
+  request(url_get, function (error, response, body) {
     // console.log('errr:', error); // Print the error if one occurred
     // console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
     // console.log('body:', body); // Print the HTML for the Google homepage.
